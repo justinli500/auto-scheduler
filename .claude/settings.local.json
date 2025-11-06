@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version:*)",
+      "Bash(mvn:*)",
+      "Bash(curl:*)",
+      "Bash(unzip:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(python3:*)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdXN0aW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NjI0NTczNzIsImV4cCI6MTc2MjU0Mzc3Mn0.Z7dRDn2hrZNerZeRcj5DMDvQq0S3IomTzctNla-SRCP9nc5_lPe9-Of8OMxAHQqJiNT7nDS2VASc73LaZa_eDg\")",
+      "Bash(tree:*)",
+      "Bash(xargs:*)",
+      "Bash(npx create-react-app task-scheduler-frontend --template minimal)",
+      "Bash(npm install:*)",
+      "Bash(npm start)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

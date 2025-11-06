@@ -1,0 +1,42 @@
+# Task Scheduler Configuration File
+#
+# This file allows you to set default values for the task scheduler.
+# All settings here can be overridden by command-line arguments.
+
+# Google Calendar Settings
+calendar:
+  # Calendar ID to add tasks to
+  # Use 'primary' for your primary calendar, or specify a calendar ID
+  # Run 'python3 task_scheduler.py --list-calendars' to see available calendars
+  id: "076abe8c0b7afc2810423d5f8dfe2aae376d78aa4de1c2d8663ab7d275816e27@group.calendar.google.com"
+
+  # Path to Google credentials file
+  credentials_path: "credentials.json"
+
+# Work Schedule
+work_hours:
+  # Start of work day (24-hour format, 0-23)
+  start: 9
+
+  # End of work day (24-hour format, 0-23)
+  end: 0
+
+  # Include weekends in scheduling (true/false)
+  include_weekends: true
+
+# Task Scheduling Preferences
+scheduling:
+  # Maximum hours per work session (tasks longer than this will be split)
+  max_session_hours: 4.0
+
+  # How many days ahead to look for free slots
+  lookahead_days: 14
+
+  # Minimum break between sessions (in minutes) - not yet implemented
+  # min_break_minutes: 30
+
+# Default Task Settings (optional)
+# These are used if not specified via command line
+defaults:
+  # Default task description (leave empty for no default)
+  description: ""
