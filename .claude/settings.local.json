@@ -13,7 +13,9 @@
       "Bash(xargs:*)",
       "Bash(npx create-react-app task-scheduler-frontend --template minimal)",
       "Bash(npm install:*)",
-      "Bash(npm start)"
+      "Bash(npm start)",
+      "Bash(pkill:*)",
+      "Bash(lsof:*)"
     ],
     "deny": [],
     "ask": []

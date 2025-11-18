@@ -29,8 +29,6 @@ public class Task {
     @Column(length = 1000)
     private String description;
 
-    @Positive(message = "Duration must be positive")
-    @Column(nullable = false)
     private Double duration; // in hours
 
     @Column(name = "max_session_hours")
@@ -45,6 +43,12 @@ public class Task {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TaskStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private TaskPriority priority;
+
+    @Column(name = "due_date")
+    private LocalDateTime dueDate;
 
     @Column(name = "calendar_id")
     private String calendarId; // which Google Calendar to use
@@ -71,6 +75,12 @@ public class Task {
         IN_PROGRESS,
         COMPLETED,
         FAILED
+    }
+
+    public enum TaskPriority {
+        LOW,
+        MEDIUM,
+        HIGH
     }
 
     @PrePersist

@@ -40,6 +40,8 @@ public class SecurityConfig {
                 // Public endpoints - no authentication required
                 .requestMatchers(
                     "/api/auth/**",
+                    "/api/calendars/**",
+                    "/api/tasks/**",
                     "/h2-console/**",
                     "/error"
                 ).permitAll()

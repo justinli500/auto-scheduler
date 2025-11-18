@@ -11,13 +11,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TaskRequest {
 
-    @NotBlank(message = "Task name is required")
-    private String name;
+    @NotBlank(message = "Task title is required")
+    private String title;
 
     private String description;
 
-    @Positive(message = "Duration must be positive")
-    private Double duration; // in hours
+    private Integer durationHours; // in hours
+
+    private String dueDate; // ISO date format
+
+    private String priority; // HIGH, MEDIUM, LOW
 
     private Double maxSessionHours; // defaults to 4.0 if not provided
 

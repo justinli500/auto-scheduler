@@ -108,10 +108,12 @@ Once complete, the API will support:
 
 ### Authentication
 ```
-POST   /api/auth/register    # Create new user
+POST   /api/auth/register    # Create new user (temporarily disabled)
 POST   /api/auth/login       # Login and get JWT token
 POST   /api/auth/google      # Connect Google Calendar
 ```
+
+> **Note:** Registration is currently turned off while the feature is being reworked. Existing users can still log in.
 
 ### Tasks
 ```
@@ -124,7 +126,10 @@ DELETE /api/tasks/{id}       # Delete task and calendar events
 
 ### Calendars
 ```
-GET    /api/calendars        # List available Google Calendars
+GET    /api/calendars                 # List available Google Calendars (planned)
+POST   /api/calendars/connect         # Start Google OAuth flow (returns authorization URL)
+GET    /api/calendars/status          # Check saved Google OAuth tokens
+GET    /api/calendars/oauth2callback  # OAuth redirect endpoint (backend use)
 ```
 
 ### Analytics (Future)
